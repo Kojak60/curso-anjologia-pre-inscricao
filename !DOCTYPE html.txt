@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pré-Inscrição: Curso de Anjologia | Canal Conexão Divina</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'angel-white': '#F8F8F8',
+                        'angel-blue': '#ADD8E6', // Azul-celeste suave
+                        'angel-silver': '#C0C0C0',
+                        'angel-gold': '#FFD700', // Dourado pálido
+                        'dark-blue': '#2C3E50', // Para texto e elementos mais escuros
+                        'light-gray': '#E0E0E0',
+                        'accent-blue': '#4A90E2', // Azul mais vibrante para CTAs
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                        garamond: ['Cormorant Garamond', 'serif'], // Fonte serifada elegante para títulos
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos globais para o corpo e elementos principais */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: '#F8F8F8'; /* Cor de fundo branca angelical */
+            color: '#333';
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+            color: '#2C3E50'; /* Azul escuro para títulos */
+        }
+        /* Efeito sutil de brilho para botões e elementos interativos */
+        .btn-glow {
+            transition: all 0.3s ease;
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        }
+        .btn-glow:hover {
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.5); /* Brilho dourado */
+            transform: translateY(-2px);
+        }
+        /* Estilo para o background da seção Hero com imagem */
+        .hero-background {
+            background-image: url('https://placehold.co/1920x1080/E0E0E0/333?text=Céu+Angelical+com+Luz'); /* Placeholder para imagem de fundo celestial */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative; /* Necessário para o overlay */
+        }
+        .hero-background::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0.9) 100%); /* Gradiente suave de branco para o fundo */
+            z-index: 1;
+        }
+        .content-container {
+            position: relative;
+            z-index: 2; /* Garante que o conteúdo esteja acima do overlay */
+        }
+        video {
+            width: 100%;
+            max-width: 720px; /* Limita a largura do vídeo para melhor visualização */
+            height: auto;
+            border-radius: 1.5rem; /* rounded-3xl */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+            border: 1px solid rgba(192, 192, 192, 0.5); /* border-angel-silver */
+        }
+        .loading-spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid #FFD700; /* Cor dourada */
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+            display: none; /* Oculto por padrão */
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <section class="hero-background min-h-screen flex items-center justify-center py-12 px-6">
+        <div class="content-container max-w-5xl mx-auto bg-white bg-opacity-90 rounded-3xl shadow-2xl p-8 md:p-12 text-center border border-angel-silver border-opacity-50">
+            <img src="logo do canal Conexão Divina.png" alt="Logo do Canal Conexão Divina - Curso de Anjologia" class="mx-auto mb-8 w-48 md:w-64 rounded-full shadow-lg">
+
+            <h1 class="text-4xl md:text-6xl font-garamond font-bold leading-tight mb-4 text-dark-blue">
+                Pré-Inscrição Exclusiva: Curso de Anjologia
+            </h1>
+            <h2 class="text-xl md:text-2xl font-inter text-gray-700 mb-8">
+                Garanta sua vaga na lista de espera e seja o(a) primeiro(a) a saber!
+            </h2>
+            <p class="text-lg md:text-xl font-inter text-gray-600 mb-10 max-w-3xl mx-auto">
+                Assista ao vídeo de apresentação e prepare-se para desvendar os segredos da hierarquia celeste, conectar-se com seu Anjo da Guarda e invocar a proteção e a sabedoria dos Arcanjos em sua vida.
+            </p>
+
+            <div class="mb-10 flex justify-center">
+                <video controls autoplay muted playsinline class="rounded-3xl shadow-xl border border-angel-silver">
+                    <source src="Apresentação do Curso de Anjologia.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </div>
+
+            <div class="bg-light-gray p-8 rounded-xl shadow-inner mb-10 border border-angel-blue border-opacity-30">
+                <h3 class="text-3xl font-garamond font-semibold mb-6 text-dark-blue">
+                    Receba Sua Mensagem Angelical ✨
+                </h3>
+                <p class="text-gray-700 mb-6">
+                    Digite uma palavra-chave, uma intenção ou uma pergunta, e receba uma mensagem inspiradora do reino angelical.
+                </p>
+                <textarea id="angelMessageInput" rows="3" placeholder="Ex: 'Paz interior', 'Orientação profissional', 'Superar desafios'..."
+                          class="w-full px-4 py-3 border border-angel-blue rounded-lg focus:outline-none focus:ring-2 focus:ring-angel-gold text-base text-dark-blue placeholder-gray-500 shadow-sm mb-4"></textarea>
+                <button id="generateAngelMessageBtn"
+                        class="bg-accent-blue text-white font-bold py-3 px-6 rounded-full text-lg uppercase tracking-wide btn-glow transition duration-300 ease-in-out hover:bg-opacity-90 flex items-center justify-center mx-auto">
+                    Gerar Mensagem Angelical ✨
+                </button>
+                <div id="loadingSpinnerAngelMessage" class="loading-spinner mt-6"></div>
+                <div id="angelMessageOutput" class="mt-6 p-4 bg-angel-white rounded-lg border border-angel-silver text-gray-800 italic text-lg hidden">
+                    </div>
+            </div>
+            <div class="bg-light-gray p-8 rounded-xl shadow-inner mb-10 border border-angel-blue border-opacity-30">
+                <h3 class="text-3xl font-garamond font-semibold mb-6 text-dark-blue">
+                    Encontre Seu Arcanjo Guia ✨
+                </h3>
+                <p class="text-gray-700 mb-6">
+                    Descreva um desafio ou objetivo em sua vida (ex: 'preciso de coragem para um novo projeto', 'quero mais harmonia em casa', 'busco cura física'), e descubra qual Arcanjo pode oferecer a orientação e o apoio que você precisa.
+                </p>
+                <textarea id="archangelInput" rows="3" placeholder="Ex: 'Preciso de orientação para minha carreira', 'Busco proteção para minha família'..."
+                          class="w-full px-4 py-3 border border-angel-blue rounded-lg focus:outline-none focus:ring-2 focus:ring-angel-gold text-base text-dark-blue placeholder-gray-500 shadow-sm mb-4"></textarea>
+                <button id="generateArchangelBtn"
+                        class="bg-angel-gold text-dark-blue font-bold py-3 px-6 rounded-full text-lg uppercase tracking-wide btn-glow transition duration-300 ease-in-out hover:bg-opacity-90 flex items-center justify-center mx-auto">
+                    Descobrir Meu Arcanjo Guia 🕊️
+                </button>
+                <div id="loadingSpinnerArchangel" class="loading-spinner mt-6"></div>
+                <div id="archangelOutput" class="mt-6 p-4 bg-angel-white rounded-lg border border-angel-silver text-gray-800 italic text-lg hidden">
+                    </div>
+            </div>
+            <p class="text-lg md:text-xl font-inter text-gray-600 mb-10 max-w-3xl mx-auto">
+                Ao se pré-inscrever, você receberá informações em primeira mão sobre o lançamento oficial do curso na Hotmart, condições especiais e bônus exclusivos.
+            </p>
+
+            <form action="#" method="POST" class="space-y-6">
+                <div>
+                    <input type="text" id="name" name="name" placeholder="Seu Nome Completo" required
+                           class="w-full px-6 py-4 border border-angel-blue rounded-xl focus:outline-none focus:ring-2 focus:ring-angel-gold text-lg text-dark-blue placeholder-gray-500 shadow-sm">
+                </div>
+                <div>
+                    <input type="email" id="email" name="email" placeholder="Seu Melhor E-mail" required
+                           class="w-full px-6 py-4 border border-angel-blue rounded-xl focus:outline-none focus:ring-2 focus:ring-angel-gold text-lg text-dark-blue placeholder-gray-500 shadow-sm">
+                </div>
+                <button type="submit"
+                        class="w-full bg-angel-gold text-dark-blue font-bold py-4 px-8 rounded-full text-xl uppercase tracking-wide btn-glow transition duration-300 ease-in-out hover:bg-opacity-90">
+                    Garantir Minha Vaga na Pré-Inscrição!
+                </button>
+            </form>
+
+            <p class="text-sm text-gray-500 mt-8">
+                Os dados coletados serão utilizados para informá-lo(a) sobre o lançamento do curso e promoções exclusivas.
+            </p>
+        </div>
+    </section>
+
+    <footer class="bg-dark-blue text-white py-6 px-6 text-center rounded-t-lg">
+        <p class="text-sm text-gray-400">&copy; 2025 Canal Conexão Divina. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // --- Funcionalidade: Mensagem Angelical ---
+        const angelMessageInput = document.getElementById('angelMessageInput');
+        const generateAngelMessageBtn = document.getElementById('generateAngelMessageBtn');
+        const angelMessageOutput = document.getElementById('angelMessageOutput');
+        const loadingSpinnerAngelMessage = document.getElementById('loadingSpinnerAngelMessage');
+
+        generateAngelMessageBtn.addEventListener('click', async () => {
+            const userInput = angelMessageInput.value.trim();
+            if (!userInput) {
+                angelMessageOutput.textContent = "Por favor, digite uma intenção ou pergunta para receber sua mensagem angelical.";
+                angelMessageOutput.classList.remove('hidden');
+                return;
+            }
+
+            loadingSpinnerAngelMessage.style.display = 'block';
+            angelMessageOutput.classList.add('hidden');
+            angelMessageOutput.textContent = '';
+
+            try {
+                let chatHistory = [];
+                chatHistory.push({ role: "user", parts: [{ text: `Gere uma mensagem angelical inspiradora e acolhedora, com no máximo 80 palavras, baseada na seguinte intenção/pergunta: "${userInput}". Comece a mensagem de forma direta e termine com uma benção.` }] });
+
+                const payload = { contents: chatHistory };
+                const apiKey = ""; // A chave da API é preenchida pelo ambiente Canvas
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    angelMessageOutput.textContent = text;
+                    angelMessageOutput.classList.remove('hidden');
+                } else {
+                    angelMessageOutput.textContent = "Não foi possível gerar a mensagem. Tente novamente.";
+                    angelMessageOutput.classList.remove('hidden');
+                }
+            } catch (error) {
+                console.error('Erro ao chamar a API Gemini para mensagem angelical:', error);
+                angelMessageOutput.textContent = "Ocorreu um erro ao gerar a mensagem. Por favor, tente novamente mais tarde.";
+                angelMessageOutput.classList.remove('hidden');
+            } finally {
+                loadingSpinnerAngelMessage.style.display = 'none';
+            }
+        });
+
+        // --- Funcionalidade: Sugestão de Arcanjo Guia ---
+        const archangelInput = document.getElementById('archangelInput');
+        const generateArchangelBtn = document.getElementById('generateArchangelBtn');
+        const archangelOutput = document.getElementById('archangelOutput');
+        const loadingSpinnerArchangel = document.getElementById('loadingSpinnerArchangel');
+
+        generateArchangelBtn.addEventListener('click', async () => {
+            const userInput = archangelInput.value.trim();
+            if (!userInput) {
+                archangelOutput.textContent = "Por favor, descreva seu desafio ou objetivo para receber a sugestão de um Arcanjo Guia.";
+                archangelOutput.classList.remove('hidden');
+                return;
+            }
+
+            loadingSpinnerArchangel.style.display = 'block';
+            archangelOutput.classList.add('hidden');
+            archangelOutput.textContent = '';
+
+            try {
+                let chatHistory = [];
+                // Definindo o papel dos Arcanjos de forma concisa
+                const arcanjosInfo = `
+                Miguel: proteção, coragem, força, corte de laços.
+                Gabriel: comunicação, mensagens divinas, criatividade, novos começos, gestação.
+                Rafael: cura física e emocional, viagens seguras, guiança.
+                Uriel: sabedoria, luz, inspiração, clareza, resolução de problemas.
+                Chamuel: amor incondicional, relacionamentos, encontrar o que está perdido, paz interior.
+                Jofiel: beleza, arte, pensamentos positivos, clareza mental, organização.
+                Zadkiel: perdão, transmutação, compaixão, liberdade.
+                Raguel: justiça, harmonia, relacionamentos, ordem divina.
+                Jeremiel: reflexão, revisão de vida, visões, sonhos.
+                Ariel: natureza, animais, manifestação, abundância, coragem.
+                Metatron: crianças, registro akáshico, geometria sagrada, ascensão.
+                Sandalfon: orações atendidas, música, entrega de mensagens.
+                `;
+
+                chatHistory.push({ role: "user", parts: [{ text: `Com base nas informações sobre Arcanjos que te dei e no seguinte desafio/objetivo: "${userInput}", sugira qual Arcanjo pode ser o guia mais apropriado. Explique brevemente (em até 60 palavras) por que ele é o mais indicado para essa situação específica. Limite sua resposta ao nome do Arcanjo e a breve explicação. Não inclua introduções ou encerramentos genéricos.` }] });
+
+                const payload = { contents: chatHistory };
+                const apiKey = ""; // A chave da API é preenchida pelo ambiente Canvas
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    archangelOutput.textContent = text;
+                    archangelOutput.classList.remove('hidden');
+                } else {
+                    archangelOutput.textContent = "Não foi possível sugerir um Arcanjo. Tente novamente.";
+                    archangelOutput.classList.remove('hidden');
+                }
+            } catch (error) {
+                console.error('Erro ao chamar a API Gemini para sugestão de Arcanjo:', error);
+                archangelOutput.textContent = "Ocorreu um erro ao gerar a sugestão. Por favor, tente novamente mais tarde.";
+                archangelOutput.classList.remove('hidden');
+            } finally {
+                loadingSpinnerArchangel.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
